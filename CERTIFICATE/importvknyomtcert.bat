@@ -1,0 +1,1 @@
+..\..\bin\keytool -import -alias vknyomtcert -keystore JAVAKONYVTAR\lib\security\cacerts -file vknyomtcert.der

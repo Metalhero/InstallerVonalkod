@@ -1,0 +1,1 @@
+java -cp c:\cttemp\CTNYTProtocolHandler.jar CTNYTProtocolHandler %1

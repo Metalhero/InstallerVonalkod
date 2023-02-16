@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="vonalkodCopy:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/vonalkodCopy_jar</output-path>
+    <root id="archive" name="vonalkodCopy.jar">
+      <element id="module-output" name="vonalkodCopy" />
+    </root>
+  </artifact>
+</component>

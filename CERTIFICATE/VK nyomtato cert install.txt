@@ -1,0 +1,25 @@
+Ahhoz, hogy a HTTPS kérés megfelelően működjön a felhasználó gépén, amelyikről indítani fogják a nyomtatást a JAVA-nak be kell állítani a megfelelő tanúsítványt (certificate). Ha több gépről is szeretnének nyomtatni akkor az összes gépen egyesével meg kell tenni az alábbiakat. 
+
+Meg kell keresni a JAVA telepítési könyvtárát. Alapértelmezetten az alábbi: 
+C:\Program Files (x86)\Java\jre1.8.0_331 (verzószám lehet eltér) 
+
+Ezen belül tovább kell navigálni a /lib/security mappába. 
+
+A JAVA telepítési könyvtár/lib/security mappába másoljuk be a vknyomtcert.der és az importvknyomtcert.bat fájlokat 
+
+Nyissuk meg az importvknyomtcert.bat fájlt valamilyen szövegszerkesztővel. (Pl.: Jobb klikk -> Szerkesztés) 
+
+A JAVAKONYVTAR rész helyett szúrjuk be a JAVA telepítési könyvtárának útját. (Pl.:  
+“..\..\bin\keytool -import -alias vknyomtcert -keystore JAVAKONYVTAR\lib\security\cacerts -file vknyomtcert.der“ -ból lesz ..\..\bin\keytool -import -alias vknyomtcert -keystore C:\Program Files (x86)\Java\jre1.8.0_331\lib\security\cacerts -file vknyomtcert.der 
+
+Mentés és bezárhatjuk a szövegszerkesztőt 
+
+Futtatjuk ugyanezt a importvknyomtcert.bat fájlt aminek hatására fel fog jönni egy parancssor ablak 
+
+Jelszónak beírjuk, hogy “changeit” (idézőjel nélkül) 
+
+Ezután, ha az ablak aljára tekerünk akkor látni fogjuk, hogy rákérdez mégegyszer, hogy biztosan megbízható-e a tanúsítvány. Itt írjuk be hogy “y” (idézőjel nélkül) és enter. Ezzel átadtuk a tanúsítványt a JAVA-nak és működni fog a HTTPS kommunikáció 
+ 
+Ha több java is fel van telepítve a gépre akkor nyissunk egy parancssor-t majd oda írjuk be, hogy “java -version”. Itt látni fogjuk, hogy melyik verziót használja éppen a windows és ahhoz kell hozzáadnunk a tanúsítványt. 
+ 
+ 

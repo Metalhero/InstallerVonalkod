@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk-17.0.1\bin\keytool" -import -alias vknyomtcert202302161639 -keystore "C:\Program Files\Java\jdk-17.0.1\lib\security\cacerts" -file "C:\Program Files\Java\jdk-17.0.1\lib\security\vknyomtcert.der"
