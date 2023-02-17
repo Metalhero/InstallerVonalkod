@@ -86,9 +86,11 @@ public class Main {
                     }
                     if (root64.isFile()) {
                         try {
+                            JOptionPane.showMessageDialog(null, "Java telepítés szükséges! Telepítés után kérem indítsa újra a nyomtató telepítőjét");
                             Process p = Runtime.getRuntime()
                                     .exec("cmd /c start " + root64);
                             p.waitFor();
+                            System.exit(0);
                         } catch (IOException e) {
                             JOptionPane.showMessageDialog(null, "Hiba a java telepítés során: /JRE/jre-8u331-windows-x64.exe");
                             e.printStackTrace();
@@ -103,9 +105,11 @@ public class Main {
                     }
                     if (root32.isFile()) {
                         try {
+                            JOptionPane.showMessageDialog(null, "Java telepítés szükséges! Telepítés után kérem indítsa újra a nyomtató telepítőjét");
                             Process p = Runtime.getRuntime()
                                     .exec("cmd /c start " + root32);
                             p.waitFor();
+                            System.exit(0);
                         } catch (IOException e) {
                             JOptionPane.showMessageDialog(null, "Hiba a java telepítés során: /JRE/jre-8u331-windows-x32.exe");
                             e.printStackTrace();
@@ -189,7 +193,7 @@ public class Main {
 
         }
 
-        JOptionPane.showConfirmDialog(null, "Telepítés sikeresen végetért!", "End", JOptionPane.DEFAULT_OPTION);
+        JOptionPane.showConfirmDialog(null, "Telepítés sikeresen végetért!", "Sikeres telepítés!", JOptionPane.DEFAULT_OPTION);
         System.exit(0);
     }
 
